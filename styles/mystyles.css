@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'BionicalDemo';
+    src: url('../fonts/BionicalDemo-8MJ5A.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../images/glowing-galaxy-backdrop-illuminates-modern-abstract-shapes-generated-by-ai.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative; /* Added to position footer relative to the body */
+}
+
+nav {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5em 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 0.3em;
+}
+
+nav ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    font-family: 'BionicalDemo', Arial, sans-serif;
+    font-size: 0.8em; /* Reduced font size */
+    padding: 0.3em 0.7em; /* Adjusted padding */
+    border: 1px solid transparent; /* Removed initial border */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Added border transition */
+}
+
+nav ul li a:hover {
+    background-color: #FFD700;
+    color: #000;
+    border: 1px solid #FFD700; /* Border on hover */
+}
+
+nav ul li a.active {
+    animation: glow 1.5s infinite alternate; /* Added glow animation */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFA500, 0 0 40px #FFA500, 0 0 50px #FF8C00, 0 0 60px #FF8C00, 0 0 70px #FF4500;
+    }
+    100% {
+        text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFA500, 0 0 50px #FFA500, 0 0 60px #FF8C00, 0 0 70px #FF8C00, 0 0 80px #FF4500;
+    }
+}
+
+h1 {
+    font-family: 'BionicalDemo', Arial, sans-serif;
+    font-size: 3em;
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFA500, 0 0 40px #FFA500, 0 0 50px #FF8C00, 0 0 60px #FF8C00, 0 0 70px #FF4500;
+    text-align: center;
+    margin-top: 3em; /* Ensure it does not overlap with the nav */
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.6em;
+}
+
+footer p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.construction {
+    font-family: 'BionicalDemo', Arial, sans-serif;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 3em;
+    position: relative; /* Add position relative */
+}
+
+.construction::before {
+    content: attr(data-text); /* Set content to the value of data-text attribute */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Move behind the text */
+    color: transparent;
+    text-shadow: 0 0 10px red, 0 0 20px orange, 0 0 30px yellow, 0 0 40px green, 0 0 50px blue, 0 0 60px indigo, 0 0 70px violet; /* Rainbow glow */
+    animation: rainbow 1s linear infinite; /* Faster rainbow animation */
+}
+
+@keyframes rainbow {
+    0% {
+        text-shadow: 0 0 10px red, 0 0 20px orange, 0 0 30px yellow, 0 0 40px green, 0 0 50px blue, 0 0 60px indigo, 0 0 70px violet;
+    }
+    100% {
+        text-shadow: 0 0 20px red, 0 0 30px orange, 0 0 40px yellow, 0 0 50px green, 0 0 60px blue, 0 0 70px indigo, 0 0 80px violet;
+    }
+}
+
+/* Adjusted styles for the mainframe text */
+#mainframe {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 1em;
+}
+
+#mainframe span {
+    font-family: 'BionicalDemo', Arial, sans-serif;
+    color: #FFD700; /* Same color as other headings */
+}
+
+#name {
+    opacity: 0;
+    animation: fadeInOut 6s infinite;
+}
+
+#underscore {
+    opacity: 0;
+    animation: fadeInOut 1s infinite;
+}
+
+
+/* Keyframes for fade in and out animation */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0; /* Start and end with opacity 0 */
+    }
+    50% {
+        opacity: 1; /* Middle of animation with opacity 1 */
+    }
+}
+
+/* Style for 'my name is...' */
+#intro {
+    font-family: 'BionicalDemo', Arial, sans-serif;
+    color: #FFD700; /* Same color as other headings */
+}
+
+/* Reduce line height for 
